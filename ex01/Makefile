@@ -11,7 +11,7 @@
 
 # name
 OUTPUT_DIR = 	.
-NAME = 			$(OUTPUT_DIR)/main
+NAME = 			$(OUTPUT_DIR)/main.out
 
 # dirs
 INCL_DIR =		.
