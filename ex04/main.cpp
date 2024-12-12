@@ -1,6 +1,4 @@
-#include<string>
-#include<fstream>
-#include<iostream>
+#include "mySed.hpp"
 
 /*
 Create a program that takes three parameters in
@@ -25,36 +23,6 @@ int main(int argc, char** argv) {
     return 1;
   }
 
-  std::string input_filename = argv[1];
-  std::string output_filename = input_filename + ".replace";
-  std::string s1 = argv[2];
-  std::string s2 = argv[3];
-
-  std::ifstream input_file(input_filename.c_str());
-  if(!input_file.is_open()) {
-    std::cerr << "Error: could not open input file " << input_filename << std::endl;
-    return 1;
-  }
-  std::ofstream output_file(output_filename.c_str());
-  if(!output_file.is_open()) {
-    std::cerr << "Error: could not open output file " << output_filename << std::endl;
-    input_file.close();
-    return 1;
-  }
-
-  std::string line;
-  int position;
-  while(std::getline(input_file, line)) {
-    while(line.find(s1) != std::string::npos) {
-      position = line.find(s1);
-      line.erase(position, s1.size()).insert(position, s2);
-    }
-    output_file << line << std::endl;
-  }
-
-  input_file.close();
-  output_file.close();
-
-  std::cout << "Replacement completed successfully." << std::endl;
+  mySed(argv[1], argv[2], argv[3]);
   return 0;
 }
