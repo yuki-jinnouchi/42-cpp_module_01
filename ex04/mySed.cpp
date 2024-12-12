@@ -27,7 +27,8 @@ mySed::mySed(std::string input_filename, std::string s1, std::string s2) {
     }
     while(line.find(s1) != std::string::npos) {
       position = line.find(s1);
-      line.erase(position, s1.size()).insert(position, s2);
+      line.erase(position, s1.size());
+      line.insert(position, s2);
     }
     output_file << line;
   }

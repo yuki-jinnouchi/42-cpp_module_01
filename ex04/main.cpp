@@ -19,10 +19,18 @@ your program works as expected.
 
 int main(int argc, char** argv) {
   if(argc != 4) {
-    std::cerr << "Usage: ./mySed.out filename s1 s2" << std::endl;
+    std::cerr << "Usage: ./mySed.out filename s1 s2 #will make filename.replace" << std::endl;
     return 1;
   }
 
   mySed(argv[1], argv[2], argv[3]);
   return 0;
 }
+
+/*
+TESTS
+compare files with diff
+$ ./mySed.out test.txt a b
+$ sed -i 's/a/b/' test.txt > test.txt.replace2
+$ diff test.txt.replace test.txt.replace2
+*/
