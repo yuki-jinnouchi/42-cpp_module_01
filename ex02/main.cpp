@@ -20,16 +20,16 @@ That’s all, no tricks. The goal of this exercise is to demystify references
 */
 
 int main() {
-  std::string  str = "HI THIS IS BRAIN";
+  std::string str = "HI THIS IS BRAIN";
   std::string *stringPTR = &str;
   std::string &stringREF = str;
 
-  std::cout << "Address of the string    : " << &str << std::endl;
-  std::cout << "Address of the stringPTR : " << &stringPTR << std::endl;
-  std::cout << "Address of the stringREF : " << &stringREF << std::endl;
-  std::cout << "String                   : " << str << std::endl;
-  std::cout << "StringPTR                : " << *stringPTR << std::endl;
-  std::cout << "StringREF                : " << stringREF << std::endl;
+  std::cout << "Address of the string        : " << &str << std::endl;
+  std::cout << "Address of held by stringPTR : " << stringPTR << std::endl;
+  std::cout << "Address of held by stringREF : " << &stringREF << std::endl;
+  std::cout << "Value of the string variable : " << str << std::endl;
+  std::cout << "Value pointed to by stringPTR: " << *stringPTR << std::endl;
+  std::cout << "Value pointed to by stringREF: " << stringREF << std::endl;
 
   return 0;
 }
