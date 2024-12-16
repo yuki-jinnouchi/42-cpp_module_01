@@ -23,7 +23,7 @@ INCL	=	$(wildcard $(INCL_DIR)/*.hpp)
 SRCS	=	$(wildcard $(SRCS_DIR)/*.cpp)
 OBJS 	=	$(patsubst $(SRCS_DIR)/%.cpp,$(OBJS_DIR)/%.o,$(SRCS))
 
-CC		=	c++
+CXX		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 UI_FLAGS :=	-I $(INCL_DIR)
 
@@ -33,7 +33,7 @@ all:	$(NAME)
 $(NAME): $(OBJS)
 	@echo "--------------------------------"
 	@echo "make OBJECTS done.\n"
-	$(CC) $(UI_FLAGS) $^ -o $@
+	$(CXX) $(UI_FLAGS) $^ -o $@
 	@echo "--------------------------------"
 	@echo "make $(NAME) done.\n"
 	chmod 777 $(NAME)
@@ -42,7 +42,7 @@ $(NAME): $(OBJS)
 
 # Compile Targets
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.cpp | $(OBJS_DIR)
-	$(CC) $(CFLAGS) $(UI_FLAGS) -c $< -o $@
+	$(CXX) $(CFLAGS) $(UI_FLAGS) -c $< -o $@
 
 $(OBJS_DIR):
 	mkdir -p $(OBJS_DIR)
