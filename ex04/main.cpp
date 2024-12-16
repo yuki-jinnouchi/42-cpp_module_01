@@ -19,7 +19,7 @@ your program works as expected.
 
 int main(int argc, char** argv) {
   if(argc != 4) {
-    std::cerr << "Usage: ./mySed.out filename s1 s2 #will make filename.replace" << std::endl;
+    std::cerr << "Usage: $> ./mySed.out filename s1 s2 #will make filename.replace" << std::endl;
     return 1;
   }
 

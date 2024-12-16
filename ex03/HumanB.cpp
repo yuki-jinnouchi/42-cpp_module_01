@@ -1,6 +1,6 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name)
+HumanB::HumanB(const std::string name)
     : _name(name) {
   _weapon = NULL;
   std::cout << _name << " is born"
@@ -12,7 +12,7 @@ HumanB::~HumanB(void) {
   std::cout << _name << " is dead" << std::endl;
 }
 
-void HumanB::setName(std::string name) {
+void HumanB::setName(const std::string name) {
   _name = name;
   return;
 }
