@@ -38,3 +38,7 @@ mySed::mySed(std::string input_filename, std::string s1, std::string s2) {
   input_file.close();
   output_file.close();
 }
+
+mySed::~mySed(void) {
+  return;
+}
