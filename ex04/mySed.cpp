@@ -1,6 +1,7 @@
 #include "mySed.hpp"
 
 mySed::mySed(std::string input_filename, std::string s1, std::string s2) {
+
   this->input_filename = input_filename;
   this->output_filename = input_filename + ".replace";
   this->s1 = s1;
@@ -19,8 +20,9 @@ mySed::mySed(std::string input_filename, std::string s1, std::string s2) {
     return;
   }
 
-  std::string line;
-  int position;
+  std::string   line;
+  int           position;
+
   while(std::getline(input_file, line)) {
     if(!input_file.eof()) {
       line += '\n';

@@ -8,8 +8,7 @@
 class mySed {
   public:
     mySed(std::string input_filename, std::string s1, std::string s2);
-    ~mySed(void) {};
-    // sed(std::string input_filename, std::string s1, std::string s2);
+    ~mySed(void);
 
   private:
     std::string input_filename;
