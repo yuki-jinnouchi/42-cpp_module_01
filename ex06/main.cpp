@@ -38,7 +38,7 @@ void print_Harls(int level) {
       harl.complain("ERROR");
       std::cout << std::endl;
     default:
-      break;
+      return;
   }
 }
 
